@@ -1,0 +1,26 @@
+
+public class Salary {
+
+	public static void main(String[] args) {
+		int Gross = 20000;
+		double StateTax = Math.round(20000 * 0.284);
+		double PersonalTax = 0;
+				if (Gross - StateTax - 7000 > 0 ) {
+					PersonalTax = 0.10 * (Gross - StateTax - 7000);
+				
+				}else {
+				PersonalTax = 0;
+				}
+				double NetSalary = (Gross - StateTax - PersonalTax);
+				
+				System.out.println("The employee: Peter Medison with Gross salary of: " + Gross + "MKD. will get NET salary: " + NetSalary + "MKD.");
+				System.out.println("State taxes are: " + StateTax + "MKD.");
+				System.out.println("Personal tax is: " + PersonalTax + "MKD.");
+				
+		
+		
+		
+
+	}
+
+}
