@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class Generator {
+    public static void main(String[] args) {
+        Random num = new Random();
+        double number = num.nextDouble() * 100;
+        long integerPart = (long) number;
+        double decimalPart = number - integerPart;
+        char charCode = (char) integerPart;
+        System.out.println("From 0..100, the computer picked "+ number);
+        System.out.println("integer part of this number is " + integerPart);
+        System.out.println("decimal part of this number is " + decimalPart);
+        System.out.println("Character with code: " + number + " is:" + charCode);
+    }
+}
