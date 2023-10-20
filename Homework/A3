@@ -1,0 +1,27 @@
+public class Object {
+
+    public static void main(String[] args) {
+        String Character = "Java Developer";
+        int length = Character.length();
+        char FirstChar = Character.charAt(0);
+        char LastChar = Character.charAt(length - 1);
+        char MiddleChar;
+
+        if (length % 2 == 0) {
+            MiddleChar = Character.charAt(length / 2);
+        } else {
+            MiddleChar = Character.charAt(length / 2);
+        }
+
+        int sum = (int) FirstChar + (int) LastChar + (int) MiddleChar;
+
+        System.out.println("The first character is: " + FirstChar);
+        System.out.println("The last character is: " + LastChar);
+        System.out.println("The middle character is: " + MiddleChar);
+        System.out.println("The sum of these characters is: " + sum);
+
+        int maxNumber = Math.max(Math.max((int) FirstChar, (int) LastChar), (int) MiddleChar);
+        char maxLetter = (char) maxNumber;
+        System.out.println("The biggest character of these three is: " + maxLetter + " with a code of " + maxNumber);
+    }
+}
