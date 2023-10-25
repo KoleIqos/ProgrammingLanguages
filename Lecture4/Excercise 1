@@ -18,8 +18,8 @@ public class Computer {
 		System.out.println("Replaced comp with calcula: " + Replace);
 		
 		
-	
-
+	 char middle = Word.length() % 2 == 0 ? (Word.charAt(Word.length()/2)) : (Word.charAt(Word.length()/2 -1)); 
+ System.out.println("Middle character: " + middle);
 	}
 
 }
