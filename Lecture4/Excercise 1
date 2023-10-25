@@ -1,0 +1,25 @@
+
+public class Computer {
+
+	public static void main(String[] args) {
+		String Word = "Computer";
+		System.out.println("Original word " + Word);
+		System.out.println("Uppercase: " + Word.toUpperCase());
+		System.out.println("Lowercase: " + Word.toLowerCase());
+		System.out.println("Lenght: " + Word.length());
+		System.out.println("First character: " + Word.charAt(0));
+		boolean EndIon = Word.endsWith("ion");
+		System.out.println("Ends with ion: " + EndIon);
+		String FirstTwo = Word.substring(0, 2);
+		System.out.println("First two letters:" + FirstTwo);
+		String Swap = Word.replace("e", "o");
+		System.out.println("Swapped e with o: " + Swap);
+		String Replace = Word.replace("Compu", "Calcula");
+		System.out.println("Replaced comp with calcula: " + Replace);
+		
+		
+	
+
+	}
+
+}
