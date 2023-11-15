@@ -1,0 +1,115 @@
+interface Two_D_shape {
+	double PI = 3.14;
+	void paramaters();
+	float area();
+	float perimeter();
+	
+
+}
+interface Three_D_shape{
+	
+	float volume();
+	
+}
+
+class Triangle implements Two_D_shape{
+
+	double sideA;
+	double sideB;
+	double sideC;
+	double height;
+	
+	
+	Triangle ( double A, double B, double C, double h){
+		
+		sideA = A;
+		sideB = B;
+		sideC = C;
+		height = h;
+		
+		System.out.println("A new triangle is created");
+		
+			
+	}
+	
+	class Sphere implements Two_D_shape, Three_D_shape{
+     double radius;
+     
+     Sphere (double radius){
+    	 
+    	 this.radius = radius;
+    	 System.out.println("A new sphere has been created");
+     }
+     
+     
+     
+     
+		@Override
+		public float volume() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public void paramaters() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public float area() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+		@Override
+		public float perimeter() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		
+		
+	}
+	
+	public boolean rectangular() {
+		return (Math.pow(sideA, 2) + Math.pow(sideB, 2) == Math.pow(sideC, 2) ? true : false);		
+	}
+	
+	@Override
+	public void paramaters() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float area() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float perimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float volume() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}
+
+public class Twoshape {
+
+	public static void main(String[] args) {
+		Triangle T1=new Triangle(3,5,6,3);
+		Sphere B1=new Sphere(4);
+		Two_D_shape T2=new Triangle(8,2,10,16);
+		Two_D_shape B2=new Sphere(3);
+		Three_D_shape B3=new Sphere(7);
+	}
+}
