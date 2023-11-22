@@ -1,31 +1,26 @@
-import java.lang.Class;
-import java.lang.reflect.*;
+import java.lang.reflect.Constructor;
 
-class Animal {
-	
-}
-
-public class Dog extends Animal {
-	public void display() {
-		System.out.println("I am a dog");
+public class Test {
+	private String s;
+	public Test () {
+		this.s = "Programming languages";
 	}
+public void method1() {
+	System.out.println(s);
 }
-
-class Main {
+public void method2(int n) {
+	System.out.println(n);
+}
+private void method3() {
+	System.out.println("Private method is invoked");
+}
+}
+public class Main {
 	public static void main(String[] args) {
-		try {
-			Dog d1 = new Dog();
-			Class obj = d1.getClass();
-			String name = obj.getName();
-			System.out.println("NAME: " + name);
-			int modifier = obj.getModifiers();
-			String mod = Modifier.toString(modifier);
-			System.out.println("Modifier: " + mod);
-			Class superClass = obj.getSuperclass();
-			System.out.println("Superclass: " + superClass.getName());
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+		Test test = new Test();
+		Class<?> cls = test.getClass();
+		System.out.println("The name of Class: " + cls.getName());
+		Constructor<?> constructor = cls.getConstructor()[0];
+		System.out.println("The name of Constructor: " + constructor.getName());
 	}
 }
